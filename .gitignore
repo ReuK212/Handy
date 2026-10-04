@@ -45,3 +45,20 @@ result
 
 # Python bytecode (scripts/)
 __pycache__/
+
+# graphify: machine-local state only; the graph, report, cache, and manifest
+# are committed intentionally so --update stays incremental for anyone.
+graphify-out/.graphify_python
+graphify-out/.graphify_root
+graphify-out/.graphify_detect.json
+graphify-out/.graphify_extract.json
+graphify-out/.graphify_ast.json
+graphify-out/.graphify_semantic.json
+graphify-out/.graphify_semantic_new.json
+graphify-out/.graphify_cached.json
+graphify-out/.graphify_uncached.txt
+graphify-out/.graphify_analysis.json
+graphify-out/.graphify_chunk_*.json
+graphify-out/.needs_update
+# AST cache is deterministic/free to regenerate; semantic cache stays committed.
+graphify-out/cache/ast/
